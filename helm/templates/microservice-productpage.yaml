@@ -40,7 +40,7 @@ spec:
       serviceAccountName: bookinfo-productpage
       containers:
       - name: productpage
-        image: docker.io/yachikaralhan49/bookinfo-productpage:1.0.1
+        image: docker.io/yachikaralhan49/bookinfo-productpage:1.0.0
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
