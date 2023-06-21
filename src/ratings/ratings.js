@@ -49,14 +49,7 @@ if (process.env.SERVICE_VERSION === 'v2') {
   if (process.env.DB_TYPE === 'mysql') {
     var mysql = require('mysql')
     var hostName = process.env.MYSQL_DB_HOST
-    var portNumber = process.env.MYSQL_DB_PORT
-    var username = process.env.MYSQL_DB_USER
-    var password = process.env.MYSQL_DB_PASSWORD
-  } else {
-    var MongoClient = require('mongodb').MongoClient
-    var url = process.env.MONGO_DB_URL
-  }
-}
+
 
 dispatcher.onPost(/^\/ratings\/[0-9]*/, function (req, res) {
   var productIdStr = req.url.split('/').pop()
